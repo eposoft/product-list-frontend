@@ -1,0 +1,65 @@
+
+.search-results {
+    margin-top: 20px;
+}
+
+.product-card {
+    margin-bottom: 20px;
+}
+
+table.table-bordered {
+    border: 2px solid #000; /* Black border around the table */
+}
+table.table-bordered th,
+table.table-bordered td {
+    border: 1px solid #000; /* Black border for cells */
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.footer {
+    margin-top: auto;
+    /* background-color: #f8f9fa; Optional: To match Bootstrap's light background */
+    padding: 1rem 0;
+}
+
+td {
+     
+    word-wrap: break-word; 
+    min-width: 10px;
+    max-width: 10px; 
+  }
+
+ /* pagination CSS */
+
+  #paginationControls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+#paginationControls button {
+    margin: 0 10px;
+}
+
+@media (max-width: 768px) {
+    #paginationControls {
+        flex-direction: column;
+    }
+
+    #paginationControls button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
+
+  
