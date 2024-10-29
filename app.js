@@ -9,7 +9,7 @@ if (!token) {
 // Function to search products
 function searchProducts() {
     const query = document.getElementById('searchQuery').value;
-    const url = query ? `http://localhost:3000/products?query=${query}` : 'http://localhost:3000/products';
+    const url = query ? `https://eposoft-product.onrender.com/products?query=${query}` : 'https://eposoft-product.onrender.com/products';
 
     fetch(url, {
         method: 'GET',
@@ -70,7 +70,7 @@ document.getElementById('updateProductBtn').addEventListener('click', function()
         }
     });
 
-    fetch(`http://localhost:3000/products/${editProduct._id}`, {
+    fetch(`https://eposoft-product.onrender.com/products/${editProduct._id}`, {
         method: 'PUT',
         headers: {
             'Authorization': `Bearer ${token}`,
@@ -91,7 +91,7 @@ document.getElementById('updateProductBtn').addEventListener('click', function()
 // Function to delete a product
 function deleteProduct(productId) {
     if (confirm('Are you sure you want to delete this product?')) {
-        fetch(`http://localhost:3000/products/${productId}`, {
+        fetch(`https://eposoft-product.onrender.com/products/${productId}`, {
             method: 'DELETE',
             headers: {
                 'Authorization': `Bearer ${token}`
@@ -119,7 +119,7 @@ document.getElementById('addProductBtn').addEventListener('click', function() {
         }
     });
 
-    fetch('http://localhost:3000/products', {
+    fetch('https://eposoft-product.onrender.com/products', {
         method: 'POST',
         headers: {
             'Authorization': `Bearer ${token}`,
@@ -229,7 +229,7 @@ function displayProducts(products) {
 // Function to search products with pagination
 function searchProducts(page = 1) {
     const query = document.getElementById('searchQuery').value;
-    const url = query ? `http://localhost:3000/products?query=${query}&page=${page}&limit=${rowsPerPage}` : `http://localhost:3000/products?page=${page}&limit=${rowsPerPage}`;
+    const url = query ? `https://eposoft-product.onrender.com/products?query=${query}&page=${page}&limit=${rowsPerPage}` : `https://eposoft-product.onrender.com/products?page=${page}&limit=${rowsPerPage}`;
 
     fetch(url, {
         method: 'GET',
